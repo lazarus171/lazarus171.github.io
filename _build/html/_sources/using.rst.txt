@@ -1,0 +1,50 @@
+How to use the process
+======================
+
+Data import
+-----------
+This process doesn't work on raw files, so that you could need to import your raw files in the Brainstorm database: to do this, just right-click on the file you want to use and select the "Import in database" item.
+
+.. image:: /assets/001_import_raw.png
+
+Set the proposed options leaving unchecked the "Create a separate folder for each event type" item, then press the "Import" button
+
+.. image:: /assets/002_import_panel.png
+
+Running the plugin
+-------------------
+
+In the database explorer, drag and drop the file you want to work out into the "Process1" tab at the bottom of the window, then click on the "RUN" button on the left
+
+.. image:: /assets/003_drag_drop_run.png
+
+In the Pipeline editor window, click on the first button to see all the categories of processes available: choose the "Test" category, then click on the "FSS through Simulated Annealing" item
+
+.. image:: /assets/010_pipeline_editor.png
+
+Set the options in the process GUI as you need (see :ref:`opt-setting`), then click on the "Run" button at the bottom of the window to make the process start. You can check the SEF values in the windows appearing before the optimization starts
+
+.. image:: /assets/025_area_related_values.png
+
+Visualize the results
+----------------------
+
+While the optimization process is running, you should see on your screen something like the image below.
+
+.. image:: /assets/030_plugin_in_progress.png
+
+When the process ends its job, two lines appear at the bottom of the Matlab Command Window: the first indicates which stopping criteria caused the algorithm to end, the second shows how much time was spent to reach the end
+
+.. image:: /assets/040_process_end.PNG
+
+A new file is now available in the database explorer: the first part of the file's name stands for the extracted brain area, while the suffix "fss" means that the process has been applied. In the figure below there are 2 files, each one resulting from a different run
+
+.. image:: /assets/050_new_files.png
+
+To visualize the signals distribution on the scalp, obtained through the FSS process, right-click on the new file, then click on the "EEG" item and finally on the "2D Disc" item as shown below
+
+.. image:: /assets/060_visual_cmd.png
+
+If everything went well, you should see the scalp distribution of the extracted signals
+
+.. image:: /assets/070_final_view.png
